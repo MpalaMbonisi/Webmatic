@@ -1,0 +1,31 @@
+// calling the built in function of sass
+@use "sass:math";
+
+// font-size: rem(30);
+// return font-size: 1.2 rem;
+@function rem($pixel){
+    // $pixel is a sass variable
+
+    @if math.is-unitless($pixel){
+        // dividing $pixel by 16 to return rems
+        @return math.div($pixel, 16) + rem;
+    }
+    // If $pixel has a unit, display an error
+    @else{
+        @error "Argument has units, please use unitless numbers"
+    }
+} 
+
+// return em units 
+@function em($pixel){
+    // $pixel is a sass variable
+
+    @if math.is-unitless($pixel){
+        // dividing $pixel by 16 to return rems
+        @return math.div($pixel, 16) + em;
+    }
+    // If $pixel has a unit, display an error
+    @else{
+        @error "Argument has units, please use unitless numbers"
+    }
+} 

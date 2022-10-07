@@ -1,0 +1,14 @@
+@use "functions" as f;
+
+:root{
+    // for the media query min
+    --medium-min: 700px,
+    --large-min: 900px, 
+    --xlarge-min: 1440px, 
+    
+    // for the media query max
+    // the values below are .02 less than the min values for conflict resolution 
+    --small-max: 699.98px,
+    --medium-max: 899.98px, 
+    --large-max: 1439.98px, 
+}

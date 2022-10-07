@@ -1,0 +1,7 @@
+.center-content{
+    margin-inline: auto;
+}
+
+// use min(default value[100%], max-width [1000px])
+// you can subtract the default value with another value if you want to add padding
+// example min(default vlaue[100% - 40px], max-width [1000px])

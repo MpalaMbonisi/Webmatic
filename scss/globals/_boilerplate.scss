@@ -1,0 +1,44 @@
+hmtl{
+    box-sizing: border-box; // allows us to include the padding and border in an element's total width and height.
+    font-size: 100%; // accessiblity purposes  - default is 16px 
+}
+
+*, *::before, *::after{
+    box-sizing: inherit; // inherit the border-box box sizing from the HMTL element
+}
+body{
+    font-family: var(--main-font);
+    background-color: var(--background-color);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+button{
+    font-weight: bold;
+    background-color: var(--background-secondary);
+    border: none;
+    cursor: pointer;
+}
+
+.secondary-navbar{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 94%;
+    height: 10%;
+    background-color: var(--background-secondary);
+    color: var(--background-color);
+    margin: auto 3%;
+    
+    h1, h5{
+        margin: auto 2%;
+    }
+
+    h1{
+        text-transform: capitalize;
+    }
+
+    .highlighted{
+        font-weight: bold;
+    }
+}

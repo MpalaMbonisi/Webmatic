@@ -1,0 +1,13 @@
+h1, h2, h3 {
+    font-weight: 700;
+    line-height: 1.1; // means that the line height of each line of text will be 10% tall.
+    margin-top: 0; // because browsers add a margin top and bottom to the text element so I am keep the margin bottom
+}
+
+p {
+    margin-top: 0;
+}
+
+a, a:visited, a:active {
+    text-decoration: none;
+}

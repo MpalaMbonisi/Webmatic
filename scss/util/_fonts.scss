@@ -1,0 +1,31 @@
+// importing the util sass partials
+@use "functions" as u;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap');
+
+:root{
+    --main-font: 'Poppins', sans-serif;
+}
+
+h1{
+    text-transform: uppercase;
+    font-size: clamp(u.rem(32), u.rem(16) + 2vw, u.rem(40));// clamp (min-value, preferred-value, max-value)
+}
+
+h4{
+    font-size: clamp(u.rem(18), u.rem(16) + 1.5vw, u.rem(18));// clamp (min-value, preferred-value, max-value)
+    text-transform: uppercase;
+}
+
+p{
+    font-size: clamp(u.rem(10), u.rem(10) + 1.3vw, u.rem(13));// clamp (min-value, preferred-value, max-value)
+}
+
+.p-text, h5{
+    font-weight: normal;
+    font-size: clamp(u.rem(11), u.rem(11) + 1.3vw, u.rem(15));// clamp (min-value, preferred-value, max-value)
+}
+
+.p-text-2{
+    font-weight: normal;
+    font-size: clamp(u.rem(13), u.rem(13) + 1.3vw, u.rem(28));// clamp (min-value, preferred-value, max-value)
+}

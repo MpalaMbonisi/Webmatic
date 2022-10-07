@@ -1,0 +1,113 @@
+@forward "globals";
+@forward "util";
+@forward "layout";
+@use "util/functions" as f;
+
+@keyframes moving-menu {
+    0% {
+        transform: translateY(80px);    
+    }
+    100% {
+        transform: translateY(0px);
+    }
+  }
+
+// drop down menu 
+/* Dropdown Button */
+.dropbtn {
+    color: var(--background-secondary);
+    background-color: transparent;
+    padding: 1em;
+    border: none;
+    width: 8em;
+    cursor: pointer;
+}
+
+// The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+// Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--background-secondary);
+    width: 8rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 9;
+    overflow: hidden;
+}
+
+// Links inside the dropdown */
+.dropdown-content a {
+    color: #000;
+    padding: 5px 5px;
+    text-decoration: none;
+    display: block;
+    animation: moving-menu 1s ease;
+    animation-direction: alternate;
+}
+
+// Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #7b7a7a; color: var(--dark);}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+.filter-section{
+    display: flex;
+    justify-content: right;
+    margin-top: 3em;
+}
+
+.web-templates-section{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 5%;
+    background-color: transparent;
+    width: 90%;
+    margin: auto 5%;
+
+    .template{
+        background-color: var(--background-secondary);
+        width: 100%;
+        height: 15em;
+        transition-duration: 1s;
+
+        .p-text{
+            display: none;
+            margin-top: 10em;
+            color:#fff;
+            text-decoration: underline;
+        }
+
+    }
+
+    .template:hover{
+        background-color: #7b7a7a;
+        cursor: pointer;
+
+        .p-text{
+            display: block;
+        }
+    }
+}
+
+.load-more-section{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3em;
+
+    button{
+        padding: .8em 3em;
+        font-family: var(--main-font);
+        transition-duration: 1s;
+    }
+
+    button:hover{
+        background-color: #2d2d2d;
+        color: var(--background-secondary);
+    }
+}

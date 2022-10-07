@@ -1,0 +1,104 @@
+@forward "globals";
+@forward "util";
+@forward "layout";
+@use "util/functions" as f;
+
+@keyframes translate-text {
+    0% {
+        transform: translateY(0);    
+    }
+    100% {
+        transform: translateY(-3em);
+    }
+  }
+
+.p-text{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #656464;
+}
+
+.about-us-section{
+    display: grid;
+    grid-template-columns: 47.5% 47.5%;
+    gap: 5%;
+    width: 90%;
+    margin: 3em 5%;
+
+    .image-section{
+        background-color: var(--background-secondary);
+    }
+
+    .text-section{
+        padding-top: 2em;
+
+        .p-text-3{
+            font-style: italic;
+            margin-bottom: 2em;
+        }
+
+        h1{
+            text-transform: capitalize;
+        }
+
+        ul {
+            width: 100%;
+            margin-left: -10%;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            list-style-type: circle;
+            list-style-position: inside;
+          }
+    }
+}
+.work-section{
+    margin-bottom: 5em;
+
+    h1, .p-text{
+        text-align: center;
+    }
+    
+
+    h1{
+        text-transform: capitalize;
+        margin-top: .8em;
+    }
+
+    .processes{
+        display: grid;
+        grid-template-columns: 21.25% 21.25% 21.25% 21.25%;
+        width: 90%;
+        gap: 5%;
+        margin: auto 5%;
+        
+        .process{
+            background-color: var(--background-secondary);
+            overflow: hidden;
+            
+            h4{
+                text-align: center;
+            }
+        }
+        .process:hover{
+            position: relative;
+            background-color: #383748;
+            cursor: pointer;
+            
+            h4{
+                display: block;
+                animation: translate-text 1s ease;
+                position: absolute;
+                transform: translateY(-3em);
+                color: #fff;
+            }
+            .padding{
+                padding-left: 2.5em;
+            }
+        }
+    }
+}
+
+lootie-player{
+    width: 100%;
+    height: 100%;
+}
